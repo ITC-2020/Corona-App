@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">CoronaApps</string>
     <string name="nullText">Null</string>
+
+
+    <string name="total_kasus">Total kasus</string>
+    <string name="total_kematial">Kematian</string>
+    <string name="total_sembuh">Sembuh</string>
+
+    <string name="feeling_sick">Are you feeling sick?</string>
+    <string name="help">If you feel sick with any of covid-19 symptoms\nplease call or SMS us immediately for help.</string>
+    <string name="Call_Now">Call Now</string>
+    <string name="Send_SMS">Send SMS</string>
 </resources>
