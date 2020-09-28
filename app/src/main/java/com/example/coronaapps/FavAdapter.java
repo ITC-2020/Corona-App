@@ -42,7 +42,7 @@ public class FavAdapter extends RecyclerView.Adapter<FavAdapter.ViewHolder>  {
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.prev_coutry_province_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_corona, parent, false);
         return new ViewHolder(view);
     }
 
@@ -78,7 +78,7 @@ public class FavAdapter extends RecyclerView.Adapter<FavAdapter.ViewHolder>  {
                         int position = getAdapterPosition();
                         if(position != RecyclerView.NO_POSITION)
                         {
-                            circleImageView.setImageDrawable(itemView.getResources().getDrawable(R.drawable.heartnocolor));
+                            circleImageView.setImageDrawable(itemView.getResources().getDrawable(R.drawable.ic_baseline_favorite_border_24));
                             onItemClickListener.onRemoveItem(position);
                         }
                     }

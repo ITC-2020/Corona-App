@@ -2,6 +2,9 @@
     <string name="app_name">CoronaApps</string>
     <string name="nullText">Null</string>
 
+    <string name="data_1">Terkonfirmasi</string>
+    <string name="data_2">Sembuh</string>
+    <string name="data_3">Kematian</string>
 
     <string name="total_kasus">Total kasus</string>
     <string name="total_kematial">Kematian</string>
