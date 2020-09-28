@@ -13,12 +13,15 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="360dp"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/ic_lens_black_24dp" />
+        <ImageButton
+            android:id="@+id/buttonLove"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="320dp"
+            android:layout_marginTop="1dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/heartcolor" />
     </LinearLayout>
 
     <LinearLayout
@@ -36,7 +39,7 @@
             android:layout_gravity="right"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="10dp"
-            android:background="#ffffff">
+            android:background="@drawable/background">
 
             <Spinner
                 android:id="@+id/spinnerGlobal"
@@ -113,7 +116,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
-                    android:src="@mipmap/ic_launcher"
+                    android:src="@drawable/coronaoren"
                     />
 
                 <TextView
@@ -132,7 +135,7 @@
                     android:layout_gravity="center"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text="Positif"
+                    android:text="@string/data_1"
                     android:textAlignment="center"
                     android:textColor="#FFCB2E"
                     android:textSize="12sp" />
@@ -146,11 +149,10 @@
                 android:padding="20dp">
 
                 <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_width="30dp"
+                    android:layout_width="26dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
-                    android:src="@mipmap/ic_launcher"
-                    />
+                    android:src="@drawable/love" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -168,7 +170,7 @@
                     android:layout_gravity="center"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text="Sembuh"
+                    android:text="@string/data_2"
                     android:textAlignment="center"
                     android:textColor="#21AA33"
                     android:textSize="12sp" />
@@ -185,7 +187,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
-                    android:src="@mipmap/ic_launcher"
+                    android:src="@drawable/meninggoy"
                     />
 
                 <TextView
@@ -204,7 +206,7 @@
                     android:layout_gravity="center"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text="Meninggal"
+                    android:text="@string/data_3"
                     android:textAlignment="center"
                     android:textColor="#FF0000"
                     android:textSize="12sp" />

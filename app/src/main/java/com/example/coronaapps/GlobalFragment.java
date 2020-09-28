@@ -1,11 +1,13 @@
 package com.example.coronaapps;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -20,31 +22,34 @@ import java.util.ArrayList;
 public class GlobalFragment extends Fragment {
 
 
+    public View v;
+
     public GlobalFragment() {
         // Required empty public constructor
     }
 
     private ArrayList<SpinnerItem> spinnerItems;
     private SpinnerAdapter spinnerAdapter;
-    String[] values = {"DFT", "JPN","IND","RNE","MID"};
+    String[] values = {"DFT", "JPN", "IND", "RNE", "MID"};
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_global, container, false);
+        v = inflater.inflate(R.layout.fragment_global, container, false);
+        configureImageButton();
         initList();
-        Spinner spinner = (Spinner) view.findViewById(R.id.spinnerGlobal);
-        spinnerAdapter = new SpinnerAdapter(view.getContext(), spinnerItems);
+        Spinner spinner = (Spinner) v.findViewById(R.id.spinnerGlobal);
+        spinnerAdapter = new SpinnerAdapter(v.getContext(), spinnerItems);
         spinner.setAdapter(spinnerAdapter);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 SpinnerItem clicked = (SpinnerItem) adapterView.getItemAtPosition(i);
                 String clickName = clicked.getName();
-                if(!clickName.equals("DFT"))
-                    Toast.makeText(view.getContext(),clickName + " Dipilih", Toast.LENGTH_SHORT).show();
+                if (!clickName.equals("DFT"))
+                    Toast.makeText(view.getContext(), clickName + " Dipilih", Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -52,14 +57,27 @@ public class GlobalFragment extends Fragment {
 
             }
         });
-        return view;
+        return v;
 
+    }
+
+    public void configureImageButton() {
+        // TODO Auto-generated method stub
+        ImageButton btn = (ImageButton) v.findViewById(R.id.buttonLove);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mIntent = new Intent(getActivity(), PrevCountryProvince.class);
+                startActivity(mIntent);
+            }
+        });
     }
 
     private void initList() {
         spinnerItems = new ArrayList<>();
-        for(short i = 0; i < values.length; i++)
+        for (short i = 0; i < values.length; i++)
             spinnerItems.add(new SpinnerItem(values[i], R.mipmap.ic_launcher));
     }
+
 
 }

@@ -10,19 +10,23 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="360dp"
-            android:src="@drawable/ic_lens_black_24dp"/>
+        <ImageButton
+            android:id="@+id/buttonLove"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="320dp"
+            android:layout_marginTop="1dp"
+            android:scaleType="centerCrop"
+            android:background="@android:color/transparent"
+            android:src="@drawable/heartcolor" />
 
         <TextView
+            android:layout_marginTop="-29dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:textSize="35sp"
-            android:text="INDONESIA"/>
+            android:text="INDONESIA"
+            android:textSize="35sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -85,7 +89,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
-                    android:src="@mipmap/ic_launcher"
+                    android:src="@drawable/coronaoren"
                     />
 
                 <TextView
@@ -104,7 +108,7 @@
                     android:layout_gravity="center"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text="Positif"
+                    android:text="@string/data_1"
                     android:textAlignment="center"
                     android:textColor="#FFCB2E"
                     android:textSize="12sp" />
@@ -121,7 +125,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
-                    android:src="@mipmap/ic_launcher"
+                    android:src="@drawable/love"
                     />
 
                 <TextView
@@ -140,7 +144,7 @@
                     android:layout_gravity="center"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text="Sembuh"
+                    android:text="@string/data_2"
                     android:textAlignment="center"
                     android:textColor="#21AA33"
                     android:textSize="12sp" />
@@ -157,7 +161,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
-                    android:src="@mipmap/ic_launcher"
+                    android:src="@drawable/meninggoy"
                     />
 
                 <TextView
@@ -176,7 +180,7 @@
                     android:layout_gravity="center"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text="Meninggal"
+                    android:text="@string/data_3"
                     android:textAlignment="center"
                     android:textColor="#FF0000"
                     android:textSize="12sp" />
