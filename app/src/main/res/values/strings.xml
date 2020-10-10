@@ -1,14 +1,15 @@
 <resources>
-    <string name="app_name">CoronaApps</string>
-    <string name="nullText">Null</string>
+    <string name="app_name" translatable="false">CoronaApps</string>
+    <string name="nullText" translatable="false">Null</string>
 
 
-    <string name="total_kasus">Total kasus</string>
-    <string name="total_kematial">Kematian</string>
-    <string name="total_sembuh">Sembuh</string>
+    <string name="total_kasus" translatable="false">Total kasus</string>
+    <string name="total_kematial" translatable="false">Kematian</string>
+    <string name="total_sembuh" translatable="false">Sembuh</string>
 
-    <string name="feeling_sick">Are you feeling sick?</string>
-    <string name="help">If you feel sick with any of covid-19 symptoms\nplease call or SMS us immediately for help.</string>
-    <string name="Call_Now">Call Now</string>
-    <string name="Send_SMS">Send SMS</string>
+    <string name="feeling_sick" translatable="false">Are you feeling sick?</string>
+    <string name="help" translatable="false">If you feel sick with any of covid-19 symptoms\nplease call or SMS us immediately for help.</string>
+    <string name="Call_Now" translatable="false">Call Now</string>
+    <string name="Send_SMS" translatable="false">Send SMS</string>
+    <string name="moreInformation" translatable="false">For More Information Click Here!</string>
 </resources>

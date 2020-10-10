@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toolbar;
 
+import com.example.coronaapps.detail.DetailCountry;
+import com.example.coronaapps.detail.DetailCountryIndo;
+
 public class MainActivity extends AppCompatActivity {
 
     Button btnFav;
@@ -20,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         btnFav.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), PrevCountryProvince.class);
+                Intent intent = new Intent(getApplicationContext(), DetailCountryIndo.class);
                 startActivity(intent);
             }
         });
