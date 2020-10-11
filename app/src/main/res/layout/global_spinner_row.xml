@@ -9,7 +9,7 @@
         android:id="@+id/icon"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:src="@mipmap/ic_launcher"
+        android:src="@drawable/heartcolor"
         android:layout_marginEnd="10dp"/>
     <TextView
         android:id="@+id/spinnerText"

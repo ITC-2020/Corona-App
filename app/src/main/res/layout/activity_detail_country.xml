@@ -221,6 +221,7 @@
                         android:scaleType="centerCrop"
                         android:src="@drawable/self_reminder1" />
                 </androidx.cardview.widget.CardView>
+              
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </androidx.core.widget.NestedScrollView>
