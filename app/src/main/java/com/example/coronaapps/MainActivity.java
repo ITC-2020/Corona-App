@@ -41,11 +41,10 @@ public class MainActivity extends AppCompatActivity {
 
         new Handler().postDelayed(new Runnable() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), DetailCountryIndo.class);
-
-                startActivity(intent);
-                finish();
+                public void run() {
+                    Intent splash = new Intent(getApplication(),MainActivity2.class);
+                    startActivity(splash);
+                    finish();
             }
         }, SPLASH_SCREEN);
 
