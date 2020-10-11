@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="INDONESIA"
+            android:text="@string/indonesia"
             android:textSize="35sp" />
 
         <TextView
@@ -33,14 +33,14 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:textSize="25sp"
-            android:text="COVID-19 UPDATE"/>
+            android:text="@string/covid_19_update"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:textSize="15sp"
-            android:text="Last Update 10 January 2021"/>
+            android:text="@string/last_update_10_january_2021"/>
 
     </LinearLayout>
 
@@ -195,7 +195,7 @@
             android:layout_marginLeft="60dp"
             android:layout_marginRight="60dp"
             android:layout_marginTop="20dp"
-            android:text="STATISTIK"
+            android:text="@string/statistik"
             android:textSize="20sp"/>
 
         <TextView

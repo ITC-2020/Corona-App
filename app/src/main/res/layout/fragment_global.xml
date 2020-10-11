@@ -56,7 +56,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="15dp"
-            android:text="IN"
+            android:text="@string/in"
             android:textColor="#FFFFFF"
             android:textSize="65sp" />
 
@@ -65,7 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginBottom="35dp"
-            android:text="Covid-19"
+            android:text="@string/covid_19"
             android:textColor="#FFFFFF"
             android:textSize="20sp" />
 
@@ -84,7 +84,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:text="UPDATE CORONA CASE"
+            android:text="@string/update_corona_case"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -92,7 +92,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:text="Last Update 10 January 2021"
+            android:text="@string/last_update_10_january_2021"
             android:textSize="10sp"
             android:textStyle="bold" />
 
@@ -235,7 +235,7 @@
                 android:layout_width="match_parent"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:text="Corona Selesai akhir Pekan ini"
+                android:text="@string/corona_selesai_akhir_pekan_ini"
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
@@ -243,7 +243,7 @@
                 android:layout_weight="4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="More"
+                android:text="@string/more"
                 android:background="#ffffff"
                 android:drawableRight="@drawable/ic_baseline_arrow_forward_24"
                 android:textColor="#000000"
