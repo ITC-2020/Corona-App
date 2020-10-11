@@ -12,6 +12,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
+import com.example.coronaapps.detail.DetailCountry;
+import com.example.coronaapps.detail.DetailCountryIndo;
+
 public class MainActivity extends AppCompatActivity {
 
     private static int SPLASH_SCREEN = 4000;
@@ -38,8 +41,9 @@ public class MainActivity extends AppCompatActivity {
 
         new Handler().postDelayed(new Runnable() {
             @Override
-            public void run() {
-                Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), DetailCountryIndo.class);
+
                 startActivity(intent);
                 finish();
             }
