@@ -4,7 +4,7 @@ public class SpinnerItem {
     private String name;
     private int img;
 
-    SpinnerItem(String name, int img)
+    public SpinnerItem(String name, int img)
     {
         this.name = name;
         this.img = img;
