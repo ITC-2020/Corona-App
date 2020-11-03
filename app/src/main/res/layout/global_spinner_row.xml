@@ -11,11 +11,12 @@
         android:layout_height="30dp"
         android:src="@drawable/heartcolor"
         android:layout_marginEnd="10dp"/>
+
     <TextView
         android:id="@+id/spinnerText"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="20dp"
         android:layout_gravity="center"
-        android:textSize="20sp"
-        android:text="JPN"/>
+        android:text="JPN"
+        android:textSize="15sp" />
 </LinearLayout>

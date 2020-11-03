@@ -1,7 +1,7 @@
 package com.example.coronaapps.model;
 import com.google.gson.annotations.SerializedName;
 
-import java.util.Date;
+import java.util.List;
 
 public class ModelResponse {
 
@@ -11,6 +11,8 @@ public class ModelResponse {
     @SerializedName("Date")
     private String date;
 
+    @SerializedName("Countries")
+    private List<ModelDataCountries> countries;
 
     public void setGlobal(ModelDataGlobal global){
         this.global = global;
@@ -18,6 +20,14 @@ public class ModelResponse {
 
     public ModelDataGlobal getGlobal(){
         return global;
+    }
+
+    public List<ModelDataCountries> getCountries() {
+        return countries;
+    }
+
+    public void setCountries(List<ModelDataCountries> countries) {
+        this.countries = countries;
     }
 
     public void setDate(String date){
