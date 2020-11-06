@@ -39,16 +39,16 @@
             android:layout_gravity="right"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="10dp"
+            android:layout_marginBottom="30dp"
             android:background="@drawable/background">
 
-            <Spinner
-                android:id="@+id/spinnerGlobal"
+            <Button
+                android:id="@+id/btn_DetGlobal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:ignore="RtlHardcoded"
-                tools:listitem="@layout/global_spinner_row">
+                android:text="Detail"
+                android:background="@drawable/box_corner_blank"/>
 
-            </Spinner>
         </LinearLayout>
 
         <TextView
@@ -57,7 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="15dp"
-            android:text="World Case"
+            android:text="Global Case"
             android:textColor="#FFFFFF"
             android:textSize="50sp" />
 
@@ -66,7 +66,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginBottom="35dp"
-            android:text="Covid-19"
+            android:text="COVID-19"
             android:textColor="#FFFFFF"
             android:textSize="20sp" />
 
@@ -74,9 +74,9 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="330dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/box_corner_blank"
         android:orientation="vertical"
@@ -87,7 +87,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:text="CORONA UPDATE CASE"
+            android:text="Corona Update Case"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -97,7 +97,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:text="Last Update 10 January 2021"
-            android:textSize="10sp"
+            android:textSize="13sp"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -107,6 +107,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="25dp"
             android:background="@drawable/box_corner_blank">
 
             <LinearLayout
@@ -220,9 +221,6 @@
             </LinearLayout>
 
         </LinearLayout>
-
-
-
 
     </LinearLayout>
 
