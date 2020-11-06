@@ -52,6 +52,7 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/tv_country"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
@@ -78,7 +79,9 @@
         android:layout_marginTop="330dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/box_corner_blank"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingTop="20dp">
+
 
         <TextView
             android:layout_width="match_parent"
@@ -138,7 +141,7 @@
                     android:layout_gravity="center"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text="@string/data_1"
+                    android:text="Total Cases"
                     android:textAlignment="center"
                     android:textColor="#FFCB2E"
                     android:textSize="12sp" />
@@ -174,7 +177,7 @@
                     android:layout_gravity="center"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text="@string/data_2"
+                    android:text="Recovered"
                     android:textAlignment="center"
                     android:textColor="#21AA33"
                     android:textSize="12sp" />
@@ -211,14 +214,13 @@
                     android:layout_gravity="center"
                     android:background="#FFFFFF"
                     android:gravity="center"
-                    android:text="@string/data_3"
+                    android:text="Deaths"
                     android:textAlignment="center"
                     android:textColor="#FF0000"
                     android:textSize="12sp" />
             </LinearLayout>
 
         </LinearLayout>
-
 
     </LinearLayout>
 

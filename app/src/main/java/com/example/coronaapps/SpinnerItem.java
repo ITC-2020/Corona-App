@@ -1,8 +1,10 @@
 package com.example.coronaapps;
 
+import com.google.gson.annotations.SerializedName;
+
 public class SpinnerItem {
-    private String name;
     private int img;
+    private String name;
 
     public SpinnerItem(String name, int img)
     {
@@ -10,13 +12,24 @@ public class SpinnerItem {
         this.img = img;
     }
 
-    public String getName() {
-        return name;
+    public String getCountryCode() {
+        return countryCode;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setCountryCode(String countryCode) {
+        this.countryCode = countryCode;
     }
+
+    @SerializedName("CountryCode")
+    private String countryCode;
+
+   public String getName() {
+    return name;
+   }
+
+   public void setName(String name) {
+      this.name = name;
+  }
 
     public int getImg() {
         return img;
