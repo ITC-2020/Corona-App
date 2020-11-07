@@ -2,11 +2,11 @@
     <string name="app_name" translatable="false">CoronaApps</string>
     <string name="nullText" translatable="false">Null</string>
 
-    <string name="data_1">Terkonfirmasi</string>
+    <string name="data_1">Positif</string>
     <string name="data_2">Sembuh</string>
     <string name="data_3">Kematian</string>
 
-    <string name="total_kasus" translatable="false">Total kasus</string>
+    <string name="total_kasus" translatable="false">Kasus</string>
     <string name="total_kematial" translatable="false">Kematian</string>
     <string name="total_sembuh" translatable="false">Sembuh</string>
 

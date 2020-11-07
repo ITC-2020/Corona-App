@@ -6,15 +6,14 @@ import android.os.Parcelable;
 public class Indonesia implements Parcelable {
     private String provinsi;
     private String kasus;
-    private String dirawat;
+    private String meninggal;
     private String sembuh;
 
     protected Indonesia(Parcel in) {
         provinsi = in.readString();
         kasus = in.readString();
-        dirawat = in.readString();
-        sembuh = in.readString();
         meninggal = in.readString();
+        sembuh = in.readString();
     }
 
     public static final Creator<Indonesia> CREATOR = new Creator<Indonesia>() {
@@ -45,12 +44,12 @@ public class Indonesia implements Parcelable {
         this.kasus = kasus;
     }
 
-    public String getDirawat() {
-        return dirawat;
+    public String getMeninggal() {
+        return meninggal;
     }
 
-    public void setDirawat(String dirawat) {
-        this.dirawat = dirawat;
+    public void setMeninggal(String meninggal) {
+        this.meninggal = meninggal;
     }
 
     public String getSembuh() {
@@ -61,17 +60,6 @@ public class Indonesia implements Parcelable {
         this.sembuh = sembuh;
     }
 
-    public String getMeninggal() {
-        return meninggal;
-    }
-
-    public void setMeninggal(String meninggal) {
-        this.meninggal = meninggal;
-    }
-
-    private String meninggal;
-
-
     @Override
     public int describeContents() {
         return 0;
@@ -81,8 +69,7 @@ public class Indonesia implements Parcelable {
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeString(provinsi);
         parcel.writeString(kasus);
-        parcel.writeString(dirawat);
-        parcel.writeString(sembuh);
         parcel.writeString(meninggal);
+        parcel.writeString(sembuh);
     }
 }

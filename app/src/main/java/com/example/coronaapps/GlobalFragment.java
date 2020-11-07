@@ -61,7 +61,7 @@ public class GlobalFragment extends Fragment {
         tvTotalRecovered = v.findViewById(R.id.tv_TotalRecovered);
         tvLastUpdate = v.findViewById(R.id.tv_LastUpdate);
         tvGlobalSpinner = v.findViewById(R.id.spinnerText);
-        spinner = v.findViewById(R.id.spinnerGlobal);
+//        spinner = v.findViewById(R.id.btn_DetGlobal);
         new ServiceGlobal().getGlobal(globalListener);
         new ServiceGlobal().getCountry(dateListener);
 
@@ -70,25 +70,25 @@ public class GlobalFragment extends Fragment {
       initList();
 
         //untuk spinner
-        Spinner spinner = (Spinner) v.findViewById(R.id.spinnerGlobal);
-        spinnerAdapter = new SpinnerAdapter(v.getContext(), spinnerItems);
-        spinner.setAdapter(spinnerAdapter);
-
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                SpinnerItem clicked = (SpinnerItem) adapterView.getItemAtPosition(i);
-                String clickName = clicked.getName();
-
-                if (!clickName.equals("DFT"))
-                    Toast.makeText(view.getContext(), clickName + " Dipilih", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
+//        Spinner spinner = (Spinner) v.findViewById(R.id.btn_DetGlobal);
+//        spinnerAdapter = new SpinnerAdapter(v.getContext(), spinnerItems);
+//        spinner.setAdapter(spinnerAdapter);
+//
+//        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+//                SpinnerItem clicked = (SpinnerItem) adapterView.getItemAtPosition(i);
+//                String clickName = clicked.getName();
+//
+//                if (!clickName.equals("DFT"))
+//                    Toast.makeText(view.getContext(), clickName + " Dipilih", Toast.LENGTH_SHORT).show();
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> adapterView) {
+//
+//            }
+//        });
         return v;
 
     }
