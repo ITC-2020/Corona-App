@@ -1,4 +1,4 @@
-package com.example.coronaapps.detail;
+package com.example.coronaapps;
 
 import android.content.Intent;
 import android.net.Uri;
