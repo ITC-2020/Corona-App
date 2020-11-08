@@ -65,7 +65,7 @@
                 android:padding="@dimen/normal_padding">
 
                 <TextView
-                    android:id="@+id/dt_province"
+                    android:id="@+id/tv_provinsi_detail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
@@ -97,7 +97,7 @@
                             android:src="@drawable/coronaoren" />
 
                         <TextView
-                            android:id="@+id/tx_nmr1"
+                            android:id="@+id/tv_kasus_detail"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="100"
@@ -133,7 +133,7 @@
                             android:src="@drawable/meninggoy" />
 
                         <TextView
-                            android:id="@+id/tx_nmr2"
+                            android:id="@+id/tv_kematian_detail"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="100"
@@ -169,7 +169,7 @@
                             android:src="@drawable/love" />
 
                         <TextView
-                            android:id="@+id/tx_nmr3"
+                            android:id="@+id/tv_sembuh_detail"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="100"

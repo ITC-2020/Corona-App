@@ -38,11 +38,10 @@
             android:layout_gravity="right"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="10dp"
-            android:layout_marginBottom="40dp"
-            android:background="@drawable/background">
+            android:layout_marginBottom="40dp">
 
             <Button
-                android:id="@+id/btn_DetIndonesia"
+                android:id="@+id/btnProvince"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Detail"
@@ -88,7 +87,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/tv_LastUpdate"
+            android:id="@+id/tvLastUpdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
@@ -121,12 +120,12 @@
                     />
 
                 <TextView
-                    android:id="@+id/tv_TotalConfirmed"
+                    android:id="@+id/tvPositive"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="15dp"
                     android:background="#FFFFFF"
-                    android:text="300"
+                    android:text="100"
                     android:textAlignment="center"
                     android:textColor="#FFCB2E"
                     android:textSize="12sp" />
@@ -157,7 +156,7 @@
                     android:src="@drawable/love" />
 
                 <TextView
-                    android:id="@+id/tv_TotalRecovered"
+                    android:id="@+id/tvsembuh"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="15dp"
@@ -194,12 +193,12 @@
                     />
 
                 <TextView
-                    android:id="@+id/tv_TotalDeath"
+                    android:id="@+id/tvMeninggal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:background="#FFFFFF"
-                    android:text="200"
+                    android:text="100"
                     android:textAlignment="center"
                     android:textColor="#FF0000"
                     android:textSize="12sp" />
