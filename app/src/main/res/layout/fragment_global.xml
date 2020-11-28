@@ -11,7 +11,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@color/colorWhite">
 
         <ImageButton
             android:id="@+id/buttonLove"
@@ -40,7 +41,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="30dp"
-            android:background="@drawable/background">
+>
 
             <Button
                 android:id="@+id/btn_DetGlobal"
@@ -58,7 +59,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginTop="15dp"
             android:text="Global Case"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/colorWhite"
             android:textSize="50sp" />
 
         <TextView
@@ -67,7 +68,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginBottom="35dp"
             android:text="COVID-19"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
 
     </LinearLayout>

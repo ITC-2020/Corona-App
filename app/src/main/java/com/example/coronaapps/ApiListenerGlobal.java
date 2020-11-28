@@ -1,6 +1,6 @@
 package com.example.coronaapps;
 
-import com.example.coronaapps.model.ModelDataGlobal;
+import com.example.coronaapps.model.ModelDataGlobal1;
 
 import java.util.List;
 

@@ -2,7 +2,7 @@ package com.example.coronaapps.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class ModelDataCountries {
+public class ModelDataCountries1 {
 
     private int img;
 
@@ -27,7 +27,7 @@ public class ModelDataCountries {
         @SerializedName("Date")
         private String date;
 
-    public ModelDataCountries(String countryCode, int ic_launcher) {
+    public ModelDataCountries1(String countryCode, int ic_launcher) {
        this.countryCode = countryCode;
        this.img = ic_launcher;
 

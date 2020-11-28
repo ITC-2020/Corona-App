@@ -1,8 +1,10 @@
 package com.example.coronaapps.service;
 
 import com.example.coronaapps.ApiListenerGlobal;
-import com.example.coronaapps.model.ModelDataCountries;
-import com.example.coronaapps.model.ModelDataGlobal;
+import com.example.coronaapps.model.ModelDataCountries1;
+import com.example.coronaapps.model.ModelDataCountries1;
+import com.example.coronaapps.model.ModelDataGlobal1;
+import com.example.coronaapps.model.ModelDataGlobal1;
 import com.example.coronaapps.model.ModelResponse;
 
 import java.util.List;
@@ -28,7 +30,7 @@ public class ServiceGlobal {
         return retrofit.create(ApiGlobal.class);
     }
 
-    public void getGlobal(final ApiListenerGlobal<ModelDataGlobal> listener) {
+    public void getGlobal(final ApiListenerGlobal<ModelDataGlobal1> listener) {
         getAPI().getCorona().enqueue(new Callback<ModelResponse>() {
             @Override
             public void onResponse(Call<ModelResponse> call, Response<ModelResponse> response) {
@@ -45,7 +47,7 @@ public class ServiceGlobal {
         });
     }
 
-    public void getCountry(final ApiListenerGlobal<List<ModelDataCountries>> listener) {
+    public void getCountry(final ApiListenerGlobal<List<ModelDataCountries1>> listener) {
         getAPI().getCorona().enqueue(new Callback<ModelResponse>() {
             @Override
             public void onResponse(Call<ModelResponse> call, Response<ModelResponse> response) {

@@ -1,20 +1,23 @@
 package com.example.coronaapps;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
-import com.example.coronaapps.model.ModelDataCountries;
-import com.example.coronaapps.model.ModelDataGlobal;
+import com.example.coronaapps.detail.DetailCountry;
+import com.example.coronaapps.model.ModelDataCountries1;
+import com.example.coronaapps.model.ModelDataGlobal1;
 import com.example.coronaapps.service.ServiceGlobal;
 
 import org.json.JSONArray;
@@ -31,20 +34,11 @@ public class GlobalFragment extends Fragment {
 
 
     public View v;
-
-    private ArrayList<SpinnerItem> spinnerItems;
-    private SpinnerAdapter spinnerAdapter;
-    //Declaring an Spinner
-    private Spinner spinner;
-    private List<ModelDataCountries> items = new ArrayList<>();
+    Button btnDetGlobal;
+    private List<ModelDataCountries1> items = new ArrayList<>();
     TextView tvTotalConfirmed, tvTotalRecovered, tvTotalDeath, tvLastUpdate,tvGlobalSpinner;
-    String[] values = {"DFT", "JPN", "ID", "RNE", "MID", "AR"};
-    //An ArrayList for Spinner Items
     private ArrayList<String> CountryCode;
-    String URL = "https://api.covid19api.com/summary";
-    //JSON Array
-    ArrayList<ModelDataCountries> countryList = new ArrayList<ModelDataCountries>();
-    private JSONArray Countries;
+    String URL = "https://api.covid19api.com/summary",date;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -61,59 +55,36 @@ public class GlobalFragment extends Fragment {
         tvTotalRecovered = v.findViewById(R.id.tv_TotalRecovered);
         tvLastUpdate = v.findViewById(R.id.tv_LastUpdate);
         tvGlobalSpinner = v.findViewById(R.id.spinnerText);
-        spinner = v.findViewById(R.id.spinnerGlobal);
-        new ServiceGlobal().getGlobal(globalListener);
-        new ServiceGlobal().getCountry(dateListener);
+        btnDetGlobal = v.findViewById(R.id.btn_DetGlobal);
 
 
-        new ServiceGlobal().getCountry(countryListener);
-      initList();
 
-        //untuk spinner
-        Spinner spinner = (Spinner) v.findViewById(R.id.spinnerGlobal);
-        spinnerAdapter = new SpinnerAdapter(v.getContext(), spinnerItems);
-        spinner.setAdapter(spinnerAdapter);
-
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        btnDetGlobal.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                SpinnerItem clicked = (SpinnerItem) adapterView.getItemAtPosition(i);
-                String clickName = clicked.getName();
-
-                if (!clickName.equals("DFT"))
-                    Toast.makeText(view.getContext(), clickName + " Dipilih", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
+            public void onClick(View view) {
+                Intent mIntent = new Intent(getContext(), PopUpCountries.class);
+                mIntent.putExtra(DetailCountry.EXTRA_DATE, date);
+                startActivity(mIntent);
 
             }
         });
+
+        new ServiceGlobal().getGlobal(globalListener);
+        new ServiceGlobal().getCountry(dateListener);
         return v;
 
     }
 
-    private void initList() {
-    spinnerItems = new ArrayList<>();
-    ArrayList<ModelDataCountries> countriesList = new ArrayList<>();
-    //for (short i = 0; i < values.length; i++)
-    //  spinnerItems.add(new SpinnerItem(values[i], R.mipmap.ic_launcher));
-       for (int i = 0; i<values.length; i++) {
-        spinnerItems.add(new SpinnerItem(values[i],R.mipmap.ic_launcher));
-    }
-   }
 
-
-    ApiListenerGlobal<ModelDataGlobal> globalListener = new ApiListenerGlobal<ModelDataGlobal>() {
+    ApiListenerGlobal<ModelDataGlobal1> globalListener = new ApiListenerGlobal<ModelDataGlobal1>() {
         @Override
-        public void onSuccess(ModelDataGlobal items) {
+        public void onSuccess(ModelDataGlobal1 items) {
             String confirmed = String.valueOf(items.getTotalConfirmed());
             tvTotalConfirmed.setText(confirmed);
             String recovered = String.valueOf(items.getTotalRecovered());
             tvTotalRecovered.setText(recovered);
             String death = String.valueOf(items.getTotalDeaths());
             tvTotalDeath.setText(death);
-
         }
 
         @Override
@@ -122,9 +93,9 @@ public class GlobalFragment extends Fragment {
         }
     };
 
-    ApiListenerGlobal<List<ModelDataCountries>> dateListener = new ApiListenerGlobal<List<ModelDataCountries>>() {
+    ApiListenerGlobal<List<ModelDataCountries1>> dateListener = new ApiListenerGlobal<List<ModelDataCountries1>>() {
         @Override
-        public void onSuccess(List<ModelDataCountries> items) {
+        public void onSuccess(List<ModelDataCountries1> items) {
             String value = String.valueOf(items.get(0).getDate());
             String month;
             int checkMonth = Integer.parseInt(value.substring(5,7));
@@ -153,18 +124,6 @@ public class GlobalFragment extends Fragment {
         }
     };
 
-    ApiListenerGlobal<List<ModelDataCountries>> countryListener = new ApiListenerGlobal<List<ModelDataCountries>>() {
-
-        @Override
-        public void onSuccess(List<ModelDataCountries> items) {
-
-        }
-
-        @Override
-        public void onFailed(String msg) {
-
-        }
-    };
 
 }
 

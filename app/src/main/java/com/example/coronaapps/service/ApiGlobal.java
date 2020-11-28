@@ -1,6 +1,6 @@
 package com.example.coronaapps.service;
 
-import com.example.coronaapps.model.ModelDataGlobal;
+import com.example.coronaapps.model.ModelDataGlobal1;
 import com.example.coronaapps.model.ModelResponse;
 
 import retrofit2.Call;

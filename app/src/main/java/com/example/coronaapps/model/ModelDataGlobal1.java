@@ -1,7 +1,7 @@
 package com.example.coronaapps.model;
 import com.google.gson.annotations.SerializedName;
 
-public class ModelDataGlobal {
+public class ModelDataGlobal1 {
 
     @SerializedName("TotalRecovered")
     private int totalRecovered;

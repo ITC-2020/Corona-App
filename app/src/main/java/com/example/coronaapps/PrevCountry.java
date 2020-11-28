@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class prev_country extends AppCompatActivity {
+public class PrevCountry extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
