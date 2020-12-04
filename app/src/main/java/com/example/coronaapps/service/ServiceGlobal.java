@@ -107,6 +107,7 @@ public class ServiceGlobal {
             }
         });
     }
+
     public void getGlobal(final ApiListenerGlobal<ModelDataGlobal> listener) {
         getAPI().getCorona().enqueue(new Callback<ModelResponse>() {
             @Override
@@ -140,4 +141,6 @@ public class ServiceGlobal {
             }
         });
     }
+
+
 }

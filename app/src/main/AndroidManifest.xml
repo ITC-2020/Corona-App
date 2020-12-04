@@ -18,6 +18,8 @@
         <activity android:name=".detail.DetailCountry" />
         <activity android:name=".MainActivity2" />
         <activity android:name=".detail.DetailProvince"/>
+        <activity android:name=".PopUpCountries"
+            android:theme="@style/AppTheme.PopUp2"></activity>
         <activity
             android:name=".PrevCountryProvince"
             android:parentActivityName=".MainActivity" />
