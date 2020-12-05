@@ -1,10 +1,12 @@
 package com.example.coronaapps.detail;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -26,7 +28,6 @@ public class DetailProvince extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_province);
-
         if (getIntent() != null){
             indonesia = getIntent().getParcelableExtra(EXTRA_PARCEL);
         }
@@ -35,9 +36,10 @@ public class DetailProvince extends AppCompatActivity {
         tv_kasus=findViewById(R.id.tv_kasus_detail);
         tv_sembuh=findViewById(R.id.tv_sembuh_detail);
         tv_meninggal=findViewById(R.id.tv_kematian_detail);
-
-        ServiceGlobal serviceGlobal= new ServiceGlobal();
-        serviceGlobal.getDetailProvinsi(provinsiListener,indonesia.getProvinsi());
+        tv_provinsi.setText(indonesia.getProvinsi());
+        tv_kasus.setText(indonesia.getKasus());
+        tv_meninggal.setText(indonesia.getMeninggal());
+        tv_sembuh.setText(indonesia.getSembuh());
 
         for(char i = 0; i < btn.length; i++)
         {
@@ -60,22 +62,6 @@ public class DetailProvince extends AppCompatActivity {
             });
         }
     }
-
-    ApiListenerGlobal<Indonesia> provinsiListener=new ApiListenerGlobal<Indonesia>() {
-        @Override
-        public void onSuccess(Indonesia indonesia) {
-            tv_provinsi.setText(indonesia.getProvinsi());
-            tv_kasus.setText(indonesia.getKasus());
-            tv_meninggal.setText(indonesia.getMeninggal());
-            tv_sembuh.setText(indonesia.getSembuh());
-        }
-
-        @Override
-        public void onFailed(String msg) {
-
-            Log.d("ERROR API", msg);
-        }
-    };
 
     private void btnCall() {
     }
