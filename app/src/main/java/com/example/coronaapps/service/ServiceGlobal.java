@@ -1,7 +1,10 @@
 package com.example.coronaapps.service;
 
+import android.widget.Toast;
+
 import com.example.coronaapps.ApiListenerGlobal;
 import com.example.coronaapps.adapter.IndoAdapter;
+import com.example.coronaapps.detail.DetailProvince;
 import com.example.coronaapps.model.Indonesia;
 import com.example.coronaapps.model.ModelDataCountries;
 import com.example.coronaapps.model.ModelDataGlobal;
@@ -90,23 +93,23 @@ public class ServiceGlobal {
         });
     }
 
-    public void getDetailProvinsi(final ApiListenerGlobal<Indonesia> listener,String provinsi){
-        getApiProvinsi().getDetailProvinsi(provinsi).enqueue(new Callback<Indonesia>() {
-            @Override
-            public void onResponse(Call<Indonesia> call, Response<Indonesia> response) {
-
-                Indonesia indonesia = response.body();
-                if (indonesia != null) {
-                    listener.onSuccess(indonesia);
-                }
-            }
-
-            @Override
-            public void onFailure(Call<Indonesia> call, Throwable t) {
-                listener.onFailed(t.getMessage());
-            }
-        });
-    }
+//    public void getDetailProvinsi(final ApiListenerGlobal<Indonesia> listener,String provinsi){
+//        getApiProvinsi().getDetailProvinsi(provinsi).enqueue(new Callback<Indonesia>() {
+//            @Override
+//            public void onResponse(Call<Indonesia> call, Response<Indonesia> response) {
+//
+//                Indonesia indonesia = response.body();
+//                if (indonesia != null) {
+//                    listener.onSuccess(indonesia);
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<Indonesia> call, Throwable t) {
+//                listener.onFailed(t.getMessage());
+//            }
+//        });
+//    }
 
     public void getGlobal(final ApiListenerGlobal<ModelDataGlobal> listener) {
         getAPI().getCorona().enqueue(new Callback<ModelResponse>() {
